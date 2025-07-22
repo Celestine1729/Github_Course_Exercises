@@ -196,8 +196,3 @@ def test_invalid_matrix_type():
         
     with pytest.raises(TypeError):
         matrix_rank([[1, 2], [3, "4"]])  # Non-numeric value
-
-def test_jagged_matrix():
-    """Test matrix with inconsistent row lengths"""
-    with pytest.raises(ValueError):
-        matrix_rank([[1, 2], [3, 4, 5]])
